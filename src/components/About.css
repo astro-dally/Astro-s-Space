@@ -1,0 +1,208 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Space Background */
+#space-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background: url('https://4kwallpapers.com/images/wallpapers/astronaut-space-suit-snow-orange-illustration-photo-1242x2208-6882.jpg') no-repeat center center fixed; */
+    /* background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBjMa3ZOrfI0dSblc7ESj8dyFvln1YLLXuyGIeCliT1qpW3zAGvQGAi7YdJiLMtWC_oB7qvMKrN5u4F-eGGggoqeuYENVW-tEDojGDXHPBiAjDv6nQAhUN8KukTgjUuEtmyZ3nnAwiD4DR6fjd-Uv7CV0Ssk2IvCwL1nTnT3D5ia6a6MPAu0scrrBSXg/s1920/pc-4k-Astronaut-aesthetics-1242023.png') no-repeat center center fixed; */
+    background: url('https://i2.wp.com/wallpapercave.com/wp/wp5485772.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* ABOUT SECTION */
+#profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+    color: #000000;
+}
+
+.section__pic-container {
+    flex: 1;
+    text-align: center;
+    animation: float 6s ease-in-out infinite;
+}
+
+.profile-pic {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 5px solid #070707;
+    animation: pulse 2s infinite;
+}
+
+.section__text {
+    flex: 2;
+    text-align: left;
+    padding: 20px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.section__text__p1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 300;
+    color: #ffffff; /* Gold color */
+}
+
+.title {
+    font-size: 3rem;
+    margin: 10px 0;
+    color: hwb(0 100% 0%); /* Gold color */
+}
+
+.section__text__p2,
+.section__text__p3,
+.section__text__p4 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #ffffff; /* White color */
+}
+
+.btn-container {
+    margin: 20px 0;
+    animation: fadeInUp 2.5s ease-in-out;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.btn-color-1 {
+    background-color: hsl(0, 0%, 100%); /* Gold color */
+    color: #000;
+}
+
+.btn-color-2 {
+    background-color: #000;
+    color: hsl(0, 0%, 100%); /* Gold color */
+    border: 2px solid #ffffff; /* Gold color */
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#socials-container {
+    margin-top: 20px;
+    animation: fadeInUp 3s ease-in-out;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    color: #ffffff;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Planet Animations */
+.planet {
+    position: absolute;
+    background: radial-gradient(circle, #d4af37 0%, #d88c8c 60%, #000000 100%);
+    border-radius: 50%;
+    animation: orbit 10s linear infinite;
+}
+
+#planet1 {
+    width: 50px;
+    height: 50px;
+    top: 20%;
+    left: 10%;
+    animation-duration: 12s;
+}
+
+#planet2 {
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    right: 15%;
+    animation-duration: 15s;
+}
+
+#planet3 {
+    width: 40px;
+    height: 40px;
+    bottom: 25%;
+    left: 60%;
+    animation-duration: 20s;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}

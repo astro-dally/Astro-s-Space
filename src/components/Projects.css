@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Projects Section */
+.projects {
+    padding: 2rem;
+    background: url('https://api.wallpapers.ai/static/downloads/eac0983db8ee43f882e5188053575dd6/upscaled/000000_353036735_kdpmpp2m15_PS7.5_aesthetic_astronaut._digital_art_concept_art_[upscaled].jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.projects::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #d4af37; /* Gold color */
+    position: relative;
+    z-index: 2;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.project {
+    width: calc(45% - 1rem); /* Two projects per row */
+    margin: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project-circle {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    animation: float 6s ease-in-out infinite;
+}
+
+.project-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #d4af37; /* Gold color */
+}
+
+.project a {
+    color: #d4af37; /* Gold color */
+    text-decoration: none;
+}
+
+.project-details {
+    margin-top: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.project-details p {
+    font-size: 1.2rem;
+}
+
+.project-links {
+    margin-top: 1rem;
+}
+
+.project-links a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffffff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.project-links a:hover {
+    transform: scale(1.05);
+    background-color: #555;
+}
+
+/* Keyframes */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

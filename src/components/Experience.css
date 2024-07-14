@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Experience Background */
+#experience-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBjMa3ZOrfI0dSblc7ESj8dyFvln1YLLXuyGIeCliT1qpW3zAGvQGAi7YdJiLMtWC_oB7qvMKrN5u4F-eGGggoqeuYENVW-tEDojGDXHPBiAjDv6nQAhUN8KukTgjUuEtmyZ3nnAwiD4DR6fjd-Uv7CV0Ssk2IvCwL1nTnT3D5ia6a6MPAu0scrrBSXg/s1920/pc-4k-Astronaut-aesthetics-1242023.png') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Experience Section */
+#experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    height: 100vh;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+    color: #ffffff;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: hwb(60 100% 0%); /* Gold color */
+}
+
+.experience-container {
+    display: flex;
+    flex-direction:column-reverse;
+    align-items: flex-start;
+    animation: fadeInUp 3s ease-in-out;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-left: 4px solid hsl(46, 100%, 54%); /* Gold color */
+}
+
+.experience-item h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: hsl(46, 100%, 50%); /* Gold color */
+}
+
+.experience-item p {
+    margin: 5px 0;
+    font-size: 4rem;
+    color: #ffffff; /* White color */
+}
+
+.experience-item ul {
+    list-style: none;
+    padding: 10;
+}
+
+.experience-item li {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #ffffff; /* White color */
+}
+
+/* Planet Animations */
+.planet {
+    position: absolute;
+    background: radial-gradient(circle, #d4af37 0%, #d88c8c 60%, #000000 100%);
+    border-radius: 50%;
+    animation: orbit 10s linear infinite;
+}
+
+#planet1 {
+    width: 50px;
+    height: 50px;
+    top: 20%;
+    left: 10%;
+    animation-duration: 12s;
+}
+
+#planet2 {
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    right: 15%;
+    animation-duration: 15s;
+}
+
+#planet3 {
+    width: 40px;
+    height: 40px;
+    bottom: 25%;
+    left: 60%;
+    animation-duration: 20s;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
